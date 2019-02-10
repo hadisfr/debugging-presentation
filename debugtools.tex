@@ -1,0 +1,52 @@
+% !TeX root=debugging.tex
+
+\subsection{Tools}
+
+\begin{frame}
+    \frametitle{Compiler logs}
+    \begin{itemize}[<+->]
+        \item compiler errors
+        \begin{itemize}[<+->]
+            \item compiler errors
+            \item link errors \onslide<+-> $\longrightarrow$ harder to read
+        \end{itemize}
+        \item start from the first one
+        \item not always at the exact position
+        \item language \& compiler version\onslide<+->: incompatibility\onslide<+->, better logs
+        \item LLVM \& \texttt{clang++}
+        \item compiler warnings
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Compiler flags}
+    \begin{itemize}[<+->]
+        \item warning options
+        \begin{description}[<+->]\footnotesize
+            \item[\texttt{-Wall}] enable all the warnings about constructions that some users consider questionable
+            \item[\texttt{-Wextra}] enable some extra warning flags that are not enabled by \texttt{-Wall}
+            \item[\texttt{-pedantic}] issue all the warnings demanded by strict ISO C and ISO C++
+        \end{description}
+        \item debugging options
+        \begin{description}[<+->]\footnotesize
+            \item[\texttt{-g}] produce debugging information in the operating system’s native format
+            \item[\texttt{-ggdb}] produce debugging information for use by GDB
+        \end{description}
+        \item sanitizers \footnotesize (\texttt{-fsanitize=})
+        \begin{description}[<+->]\footnotesize
+            \item[\texttt{address}] enable AddressSanitizer memory error detector
+            \item[\texttt{leak}] enable LeakSanitizer memory leak detector
+            \item[\texttt{undefined}] enable UndefinedBehaviorSanitizer undefined behaviour detector
+        \end{description}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{External tools}
+    \begin{description}[<+->]
+        \item[\texttt{gdb}] the GNU Project debugger
+        \item[\texttt{lldb}] LLVM debugger
+        \item[\texttt{ddd}] a graphical front-end for command-line debuggers
+        \item[\texttt{valgrind}] a programming tool for memory debugging, memory leak detection, and profiling
+    \end{description}
+\end{frame}

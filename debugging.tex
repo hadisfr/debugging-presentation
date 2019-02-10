@@ -1,0 +1,71 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+
+% \documentclass[handout,xcolor={dvipsnames}]{beamer}
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=1cm]
+
+\usepackage{appendixnumberbeamer}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{pstricks}
+\usepackage{fvextra}
+\usepackage{hyperref}
+\renewcommand\appendixname{Appendix}
+\usetikzlibrary{decorations.pathreplacing,calc,shapes,positioning,tikzmark,arrows,arrows.meta}
+
+\usetheme[secheader]{Madrid}
+\usecolortheme{beaver}
+\graphicspath{{./img/}}
+\lstset{
+    language=C++,
+    columns=flexible,
+    basicstyle=\scriptsize\ttfamily\color{Gray},
+    keywordstyle=\bfseries\color{Blue},
+    keywordstyle={[2]\bfseries\color{BlueViolet}},
+    stringstyle=\color{Red},
+    commentstyle=\color{Green},
+    identifierstyle=\color{Black},
+    numbers=none,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=true,
+    showstringspaces=false,
+    tabsize=4,
+    morecomment=[l][\color{Sepia}]{\#}
+}
+
+\title{Debugging}
+\author{\href{mailto:hadi.safari@ut.ac.ir?subject=[AP\%20S98]\%20}{Hadi Safari}}
+\institute[University of Tehran]{
+    \resizebox{!}{10ex}{\input{ut}}\\
+    University of Tehran
+}
+\logo{\resizebox{!}{10ex}{\input{ut}}}
+\date[Advanced Programming (S98)]{
+    Advanced Programming\\
+    \small Spring 1398
+}
+\subject{Programming}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{\secname}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\input{whywhat}
+\input{typeofbugs}
+\section{How to debug}
+\input{debugapproaches}
+\input{debugtools}
+
+% \appendix
+
+\end{document}
