@@ -16,6 +16,24 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{More examples of false assumptions}
+    \tikz[overlay]\node[anchor=east] at (70ex,1ex) {\tiny\href{https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/}{\textit{What does debugging a program look like?}}, Julia Evans};
+    \begin{itemize}[<+->]
+        \item this variable is set to X (``that filename is definitely right'')
+        \item that variable's value can't possibly have changed between X and Y
+        \item this code was doing the right thing before
+        \item this function does X
+        \item I'm editing the right file
+        \item there can't be any typos in that line I wrote it is just 1 line of code
+        \item the documentation is correct
+        \item the code I'm looking at is being executed at some point
+        \item these two pieces of code execute sequentially and not in parallel
+        \item the code does the same thing when compiled in debug / release mode (or with \texttt{-O2} and without, or\ldots)
+        \item the compiler is not buggy\onslide<+->{} (though this is last on purpose, the compiler is only very rarely to blame :) )
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
     \frametitle{Stabilize, isolate, minimize}
     \tikz[overlay]\node[anchor=east] at (70ex,14ex) {\tiny\href{https://sway.office.com/PavDhCql8Adms1Ap}{\textit{The Art of Debugging}}, Ehsan Hajyasini, UT AP F96};
     \begin{itemize}[<+->]
@@ -30,6 +48,16 @@
     \begin{figure}
         \includegraphics[height=0.8\textheight]{steps-to-reproduce.png}
     \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reproducing bugs}
+    \tikz[overlay]\node[anchor=east] at (70ex,10ex) {\tiny\href{https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/}{\textit{What does debugging a program look like?}}, Julia Evans};
+    \begin{itemize}[<+->]
+        \item for something that requires clicking on a bunch of things in a browser to reproduce, recording what you clicked on with \textit{Selenium} and getting \textit{Selenium} to replay the UI interactions
+        \item writing a unit test that reproduces the bug\onslide<+->\\\textbf{bonus}: you can add this to your test suite later if it makes sense
+        \item writing a script or finding a command line incantation that does it
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
