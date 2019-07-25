@@ -34,7 +34,7 @@
             \begin{lstlisting}[]
 int area(int length, int width); // calculate area of a rectangle
 
-int x = area(10,  –7); // OK: but a rectangle with a negative width?
+int x = area(10, -7); // OK: but a rectangle with a negative width?
 int y = area(10.7, 9.3); // OK: but calls area(10, 9)
 char z = area(100, 9999); // OK: but truncates the result
             \end{lstlisting}
