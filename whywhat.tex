@@ -33,11 +33,29 @@
 
 \begin{frame}
     \frametitle{Does it happen?}
+    \begin{figure}
+        \includegraphics[height=0.6\textheight]{cmon-do-an-error.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Does it happen?}
     \tikz[overlay]\node[rotate=-6] at (60ex,9ex) {\includegraphics[width=0.23\textwidth]{Stroustrup_PPP.jpg}};
     \begin{itemize}[<+->]
         \item When we write programs, errors are natural and unavoidable.
         \item \textit{The last bug} is a programmers’ joke.
         \item By the time we might have, we are busy modifying the program for some new use.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Does it matter?}
+    \begin{itemize}[<+->]
+        \item Therac-25 Radiation Therapy Machine \small$\longrightarrow$ overdosed six people
+        \item Northeast Blackout of 2003 \small$\longrightarrow$ 55,000,000 people affected 
+        \item Pentium FDIV Bug \small$\longrightarrow$ \$475,000,000 cost
+        \item NASA Mariner 1 Destruction \small$\longrightarrow$ \$18,500,000 cost
+        \item Year 2000 Problem
     \end{itemize}
 \end{frame}
 
@@ -52,17 +70,6 @@
         \item logical errors
     \end{itemize}
     \onslide<+->Errors are always more common when you are tired or rushed.
-\end{frame}
-
-\begin{frame}
-    \frametitle{Does it matter?}
-    \begin{itemize}[<+->]
-        \item Therac-25 Radiation Therapy Machine \small$\longrightarrow$ overdosed six people
-        \item Northeast Blackout of 2003 \small$\longrightarrow$ 55,000,000 people affected 
-        \item Pentium FDIV Bug \small$\longrightarrow$ \$475,000,000 cost
-        \item NASA Mariner 1 Destruction \small$\longrightarrow$ \$18,500,000 cost
-        \item Year 2000 Problem
-    \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -89,18 +96,18 @@
 
 \begin{frame}
     \frametitle{Debugging is hard}
+    \begin{figure}
+        \includegraphics[height=0.8\textheight]{minor-bug.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Debugging is really hard}
     \begin{quote}
         Everyone knows that debugging is twice as hard as writing a program in the first place.
 
         \hfill\scriptsize ---~Brian Kernighan
     \end{quote}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Debugging is really hard}
-    \begin{figure}
-        \includegraphics[height=0.8\textheight]{minor-bug.png}
-    \end{figure}
 \end{frame}
 
 \begin{frame}

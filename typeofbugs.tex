@@ -20,9 +20,9 @@
     \end{itemize}
 \end{frame}
 
-\subsection{Compile-time errors}
+\subsection<beamer:0>{Compile-time errors}
 
-\begin{frame}[fragile]
+\begin{frame}<beamer:0>[fragile]
     \frametitle{Compile-time errors}
     \tikz[overlay]\node[rotate=-6] at (60ex,3ex) {\includegraphics[width=0.23\textwidth]{Stroustrup_PPP.jpg}};
     \begin{itemize}[<+->]
@@ -58,9 +58,9 @@ char z = area(100, 9999); // OK: but truncates the result
     \end{figure}
 \end{frame}
 
-\subsection{Run-time errors}
+\subsection<beamer:0>{Run-time errors}
 
-\begin{frame}
+\begin{frame}<beamer:0>
     \frametitle{Run-time errors}
     \tikz[overlay]\node[rotate=-6] at (60ex,5ex) {\includegraphics[width=0.23\textwidth]{Stroustrup_PPP.jpg}};
     \begin{itemize}[<+->]
@@ -76,7 +76,7 @@ char z = area(100, 9999); // OK: but truncates the result
     \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
     \frametitle{Integration errors}
     \tikz[overlay]\node[rotate=-6] at (60ex,0ex) {\includegraphics[width=0.23\textwidth]{Stroustrup_PPP.jpg}};
     Who should deal with errors in function calls?
@@ -99,7 +99,7 @@ char z = area(100, 9999); // OK: but truncates the result
     \onslide<+->Check your arguments in a function unless you have a good reason not to.
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
     \frametitle{Error reporting}
     \begin{itemize}[<+->]
         \item \texttt{cerr} \& \texttt{stderr} \onslide<+-> $\longrightarrow$ redirection: \texttt{./a.out 2> err.txt}
@@ -127,9 +127,9 @@ char z = area(100, 9999); // OK: but truncates the result
     \end{itemize}
 \end{frame}
 
-\subsection{Logic errors}
+\subsection<beamer:0>{Logic errors}
 
-\begin{frame}
+\begin{frame}<beamer:0>
     \frametitle{Logic errors}
     \tikz[overlay]\node[rotate=-6] at (60ex,4ex) {\includegraphics[width=0.23\textwidth]{Stroustrup_PPP.jpg}};
     \begin{itemize}[<+->]

@@ -18,6 +18,28 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]
+    \frametitle{Stack trace}
+    \begin{Verbatim}[fontsize=\tiny]
+Traceback (most recent call last):
+  File "./__main__.py", line 154, in <module>
+    main()
+  File "./__main__.py", line 145, in main
+    config = extract_config(config_file_addr)
+  File "./__main__.py", line 21, in extract_config
+    config = DictWrapper(json.load(f))
+  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 43 column 5 (char 1114)
+    \end{Verbatim}
+\end{frame}
+
 \begin{frame}
     \frametitle{Compiler flags}
     \begin{itemize}[<+->]

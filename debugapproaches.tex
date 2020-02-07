@@ -3,6 +3,13 @@
 \subsection{Approaches}
 
 \begin{frame}
+    \frametitle{How to debug}
+    \begin{figure}
+        \includegraphics[height=0.8\textheight]{bug-fixing-ways.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
     \frametitle{False assumptions}
     \tikz[overlay]\node[anchor=east] at (70ex,8ex) {\tiny\href{https://sway.office.com/PavDhCql8Adms1Ap}{\textit{The Art of Debugging}}, Ehsan Hajyasini, UT AP F96};
     Finding your bug is a process of confirming the many things you believe are true, until you find one which is not true.
@@ -15,7 +22,7 @@
     \onslide<+->So\dots check the assumptions!\onslide<+-> $\longrightarrow$ binary search\onslide<+->, pre \& post conditions
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
     \frametitle{More examples of false assumptions}
     \tikz[overlay]\node[anchor=east] at (70ex,1ex) {\tiny\href{https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/}{\textit{What does debugging a program look like?}}, Julia Evans};
     \begin{itemize}[<+->]
@@ -50,7 +57,7 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
     \frametitle{Reproducing bugs}
     \tikz[overlay]\node[anchor=east] at (70ex,10ex) {\tiny\href{https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/}{\textit{What does debugging a program look like?}}, Julia Evans};
     \begin{itemize}[<+->]
@@ -60,7 +67,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}<beamer:0>
     \frametitle{Scientific method of debugging}
     \tikz[overlay]\node[anchor=east] at (58ex,5ex) {\tiny\textit{Debugging}, Max Goldman and Rob Miller, \href{http://web.mit.edu/6.031/www/fa17/}{MIT Software Construction (6.031) F17}};
     \tikz[overlay]\node[rotate=-6] at (63ex,4.5ex) {\includegraphics[width=0.13\textwidth]{whyprogramsfail.jpg}};
@@ -76,26 +83,4 @@
         \item \textbf{experiment} \onslide<+->$\longrightarrow$ devise and run an experiment 
         \item \textbf{repeat}
     \end{enumerate}
-\end{frame}
-
-\begin{frame}[fragile]
-    \frametitle{Stack trace}
-    \begin{Verbatim}[fontsize=\tiny]
-Traceback (most recent call last):
-  File "./__main__.py", line 154, in <module>
-    main()
-  File "./__main__.py", line 145, in main
-    config = extract_config(config_file_addr)
-  File "./__main__.py", line 21, in extract_config
-    config = DictWrapper(json.load(f))
-  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/__init__.py", line 296, in load
-    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
-  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/__init__.py", line 348, in loads
-    return _default_decoder.decode(s)
-  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "/usr/local/Cellar/python/.../3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
-    obj, end = self.scan_once(s, idx)
-json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 43 column 5 (char 1114)
-    \end{Verbatim}
 \end{frame}
