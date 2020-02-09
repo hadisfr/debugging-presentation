@@ -33,13 +33,6 @@
 
 \begin{frame}
     \frametitle{Does it happen?}
-    \begin{figure}
-        \includegraphics[height=0.6\textheight]{cmon-do-an-error.png}
-    \end{figure}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Does it happen?}
     \tikz[overlay]\node[rotate=-6] at (60ex,9ex) {\includegraphics[width=0.23\textwidth]{Stroustrup_PPP.jpg}};
     \begin{itemize}[<+->]
         \item When we write programs, errors are natural and unavoidable.
@@ -80,6 +73,8 @@
         \item formal verification
         \item design for test \& debug\onslide<+->, write clean codes
     \end{itemize}
+    {\onslide<3-3| handout:0>\tikz[overlay,anchor=west]\node at (0.4\textwidth,6ex) {\includegraphics[height=0.8\textheight]{vm}};}
+    {\onslide<2-2| handout:0>\tikz[overlay,anchor=west]\node at (0.2\textwidth,6ex) {\includegraphics[width=0.7\textwidth]{plugin_tests_overview.png}};}
 \end{frame}
 
 \begin{frame}
@@ -111,7 +106,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Bugs are so complex}
+    \frametitle{Bugs are complex}
     \begin{figure}
         \includegraphics[height=0.8\textheight]{root-cause.png}
     \end{figure}
